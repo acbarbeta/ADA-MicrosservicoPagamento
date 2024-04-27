@@ -26,7 +26,7 @@ public class Pagamento {
     @Column(name = "numero_cartao", nullable = false, unique = true)
     @NotBlank(message = "Esse campo é obrigatório!")
     @Size(min = 16, max = 16, message = "Esse campo deve conter 16 dígitos!")
-    private Integer numero_cartao;
+    private String numero_cartao;
 
     @Column(name = "titular", nullable = false)
     @NotBlank(message = "Esse campo é obrigatório")
