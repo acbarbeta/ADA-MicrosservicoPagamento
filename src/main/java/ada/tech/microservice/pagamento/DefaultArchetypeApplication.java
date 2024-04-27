@@ -1,4 +1,4 @@
-package ada.tech.tenthirty.tvpackages;
+package ada.tech.microservice.pagamento;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

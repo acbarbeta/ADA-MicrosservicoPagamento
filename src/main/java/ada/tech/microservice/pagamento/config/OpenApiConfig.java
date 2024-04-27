@@ -1,4 +1,4 @@
-package ada.tech.tenthirty.tvpackages.config;
+package ada.tech.microservice.pagamento.config;
 
 import io.swagger.v3.oas.models.OpenAPI;
 import io.swagger.v3.oas.models.info.Info;
@@ -10,7 +10,7 @@ public class OpenApiConfig {
     @Bean
     public OpenAPI defaultOpenApiConfig(){
         return new OpenAPI()
-                .info(new Info().title("TV Packages architecture sample")
+                .info(new Info().title("Pagamento Packages architecture sample")
                         .description("Default description ")
                         .version("0.0.1"));
     }

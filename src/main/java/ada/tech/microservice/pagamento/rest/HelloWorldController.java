@@ -1,6 +1,6 @@
-package ada.tech.tenthirty.tvpackages.rest;
+package ada.tech.microservice.pagamento.rest;
 
-import ada.tech.tenthirty.tvpackages.payloads.HelloResponse;
+import ada.tech.microservice.pagamento.payloads.HelloResponse;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
