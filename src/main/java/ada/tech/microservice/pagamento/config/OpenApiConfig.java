@@ -10,7 +10,7 @@ public class OpenApiConfig {
     @Bean
     public OpenAPI defaultOpenApiConfig(){
         return new OpenAPI()
-                .info(new Info().title("Pagamento Packages architecture sample")
+                .info(new Info().title("TV Packages architecture sample")
                         .description("Default description ")
                         .version("0.0.1"));
     }
