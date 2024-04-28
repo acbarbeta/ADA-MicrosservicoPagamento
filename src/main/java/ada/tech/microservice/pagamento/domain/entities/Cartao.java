@@ -5,9 +5,11 @@ import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 import lombok.*;
 
+import java.io.Serializable;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.UUID;
 
 @Entity
 @Table(name = "cartao")
@@ -16,11 +18,13 @@ import java.util.Date;
 @EqualsAndHashCode
 @AllArgsConstructor
 @NoArgsConstructor
-public class Cartao {
+public class Cartao implements Serializable {
+    private static final long serialVersionUID = 1L;
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_cartao", nullable = false, unique = true)
-    private String id_cartao;
+    private UUID id_cartao;
 
     @Column(name = "numero_cartao", nullable = false, unique = true)
     @NotBlank(message = "Esse campo é obrigatório!")
