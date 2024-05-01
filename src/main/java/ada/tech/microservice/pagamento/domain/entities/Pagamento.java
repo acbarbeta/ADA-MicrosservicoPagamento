@@ -17,6 +17,8 @@ public class Pagamento {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
+    private UUID id;
+
     private UUID id_cliente;
 
     private UUID id_compra;
