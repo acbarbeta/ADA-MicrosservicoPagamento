@@ -1,9 +1,11 @@
 package ada.tech.microservice.pagamento.rest;
 
 import ada.tech.microservice.pagamento.domain.entities.Pagamento;
+import ada.tech.microservice.pagamento.payloads.request.PagamentoRequest;
 import ada.tech.microservice.pagamento.payloads.response.PagamentoResponse;
 import ada.tech.microservice.pagamento.services.CancelarPagamentoService;
 import ada.tech.microservice.pagamento.services.ConsultarPagamentoService;
+import ada.tech.microservice.pagamento.services.RealizarPagamentoService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
@@ -19,8 +21,21 @@ import java.util.UUID;
 @RequiredArgsConstructor
 
 public class PagamentoController {
+    private final RealizarPagamentoService realizarPagamentoService;
     private final ConsultarPagamentoService consultarPagamentoService;
     private final CancelarPagamentoService cancelarPagamentoService;
+
+    @Operation(summary = "Realizar o pagamento")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "201", description = "Pagamento realizado com sucesso"),
+            @ApiResponse(responseCode = "400", description = "Erro ao realizar o pagamento"),
+    })
+    @PostMapping(value = "/")
+    @ResponseStatus(HttpStatus.CREATED)
+    public PagamentoResponse realizarPagamento (@RequestBody PagamentoRequest pagamentoRequest){
+
+        return realizarPagamentoService.realizarPagamento(pagamentoRequest);
+    }
 
     @Operation(summary = "Consultar o pagamento")
     @ApiResponses(value = {
@@ -48,5 +63,3 @@ public class PagamentoController {
         cancelarPagamentoService.cancelarPagamento(pagamentoId.toString());
     }
 }
-
-
