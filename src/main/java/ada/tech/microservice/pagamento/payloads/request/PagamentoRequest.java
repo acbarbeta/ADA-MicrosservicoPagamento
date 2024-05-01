@@ -3,11 +3,15 @@ package ada.tech.microservice.pagamento.payloads.request;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.util.UUID;
 
 @Data
 @Schema
+@Getter
+@Setter
 public class PagamentoRequest {
 
     @Schema(example = "550e8400-e29b-41d4-a716-446655440000")
