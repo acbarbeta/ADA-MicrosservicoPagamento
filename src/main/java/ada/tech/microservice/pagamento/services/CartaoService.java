@@ -1,4 +1,4 @@
-package ada.tech.microservice.pagamento.rest;
+package ada.tech.microservice.pagamento.services;
 
 import ada.tech.microservice.pagamento.domain.entities.Cartao;
 import lombok.RequiredArgsConstructor;
