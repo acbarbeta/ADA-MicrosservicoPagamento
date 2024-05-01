@@ -1,6 +1,6 @@
 package ada.tech.microservice.pagamento.domain.entities;
 
-import ada.tech.microservice.pagamento.enums.StatusCompra;
+import ada.tech.microservice.pagamento.enums.StatusPagamento;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
@@ -23,5 +23,5 @@ public class Pagamento {
 
     private UUID id_cartao;
 
-    private StatusCompra statusCompra;
+    private StatusPagamento statusPagamento;
 }
