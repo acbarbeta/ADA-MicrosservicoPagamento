@@ -11,10 +11,6 @@ spring:
     name: default-arquetype
   main:
     allow-bean-definition-overriding: true
-#Remove this feature to enable database connections
-  autoconfigure:
-    exclude:
-      - org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
   liquibase:
     enabled: false
 
