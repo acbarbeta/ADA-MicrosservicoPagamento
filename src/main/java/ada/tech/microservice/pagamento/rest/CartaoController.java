@@ -1,6 +1,7 @@
 package ada.tech.microservice.pagamento.rest;
 
 import ada.tech.microservice.pagamento.domain.entities.Cartao;
+import ada.tech.microservice.pagamento.services.CartaoService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
